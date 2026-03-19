@@ -2,16 +2,13 @@
 
 ### 🕹️ Concept
 Recreated the Flappy Bird game using codings learned from week 1 to 5.
-Each paddle and ball is a class with its own properties and methods.
+Bird and Pipes are classes with their own properties and methods. 
 
 ### 💡 Features
 - Collision detection using `dist()`
 - Score tracking and game-over states
-- Player controls via `W/S` and `↑/↓` keys
-
-### 📸 Screenshots
-![Gameplay](assets/pong01.png)
-![Game Over Screen](readme-assets/pong02.png)
+- Background music and flying sound effect
+- Player controls via space bar
 
 ### How to play
 - Press space bar to make the bird fly
@@ -21,12 +18,7 @@ Each paddle and ball is a class with its own properties and methods.
 - Game over immediately after touching the pipe -- final score will be shown at the top center of the screen
 
 ### 🎥 Demo Video
-[Watch on Google Drive](<https://drive.google.com/your-video-link>)
-
-### 🔍 Code Structure
-- `Paddle.js` and `Ball.js` for main classes
-- `sketch.js` for setup and game loop
-- `README.md` for documentation
+(mini-project/Mini%20project_video04.mp4)
 
 ### Reflection
 This project is bringing together all the concepts learned in the precvious classes. It helped me to get a better idea of where to create the arrays, make actions, and call the functions. At first, it was quite difficult to write out the correct codes to perform the right actions. However, everything turned out to make more sense as I progressed, and I was able to gradually find a pattern for coding. For instance, after I suceeded in creating a "game over" after detecting collision, it became easier to write the scoring system. 

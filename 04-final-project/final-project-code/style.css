@@ -1,0 +1,44 @@
+.emotion-btn {
+/*   width: 150px;
+  height: 50px; */
+  padding: 12px 24px;
+  box-sizing: border-box; 
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Avenir';
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.emotion-btn:hover {
+  background-color: grey; 
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-family: 'Avenir';
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: grey;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
+}

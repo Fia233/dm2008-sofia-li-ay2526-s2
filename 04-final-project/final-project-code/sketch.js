@@ -5,6 +5,8 @@ let currentEmotion = [];
 let extraShapes = [];
 let titleSize = 48;
 let targetTitleSize = 48; // help from AI
+let currentShape = "ellipse";
+const NUM_START = 50;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -24,13 +26,14 @@ function setup() {
   excitedBtn.mousePressed(() => {
     currentEmotion = "excited";
     buttonContainer.class("hidden");
+    extraShapes = [];
     for (let i = 0; i < NUM_START; i++) {
       let w = random(width);
       let h = random(height);
       let sz = random(10, 35);
       let speedX = random(-2, 3);
       let speedY = random(-2, 3);
-      extraShapes.push(new extraShapes(w, h, sz, speedX, speedY));
+      extraShapes.push(new Agent(w, h, sz, speedX, speedY));
     }
   });
   
@@ -51,14 +54,6 @@ function setup() {
   anxiousBtn.mousePressed(() => {
     currentEmotion = "anxious";
     buttonContainer.class("hidden");
-    // for (let i = 0; i < 8; i++) {
-    //   extraShapes.push({
-    //     x: random(width),
-    //     y: random(height),
-    //     size: random(3, 12),
-    //     life: 200
-    //   });
-    // }
   });
   
   irritatedBtn = createButton("irritaTED");
@@ -134,19 +129,41 @@ function draw() {
   
   // Effects
   if (currentEmotion === "excited") {
-    background(255, 200, 50);
-    title = false;
-    for (let i = 0; i < extraShapes.length; i++) {
-      extraShapes[i].update(); 
-      extraShapes[i].shrink();
-      extraShapes[i].show();
-    }
-    for (let i = extraShapes.length - 1; i >= 0; i--) {
-      if (extraShapes[i].sz <= 0) {
-        extraShapes.splice(i, 1);
-    }
- }
+    let mouseXPos = mouseX;
+    let mouseYPos = mouseY;
+
+    if (mouseXPos < width / 2 && mouseYPos > height / 2) {
+      background(255);
   } 
+    else if (mouseXPos > width / 2 && mouseYPos < height / 2) {
+      background(0);
+  } 
+    else {
+      background(255, 200, 50);
+  }
+  
+  title = false;
+  
+  for (let i = 0; i < extraShapes.length; i++) {
+    extraShapes[i].update(); 
+   // extraShapes[i].shrink();
+    extraShapes[i].show();
+  }
+  
+  // Remove dead shapes
+  for (let i = extraShapes.length - 1; i >= 0; i--) {
+    if (extraShapes[i].sz <= 0) {
+      extraShapes.splice(i, 1);
+    }
+  }
+  
+  // Display instructions
+  fill(0);
+  textSize(14);
+  textAlign(CENTER, TOP);
+  text("Press 1: Circle | 2: Square | 3: Triangle", 10, 30);
+  text("Press C to clear shapes", 10, 50);
+}
   else if (currentEmotion === "bored") {
     background(200);
     title = false;
@@ -193,6 +210,125 @@ function draw() {
     text("How do you feel?", width / 2, 200);
   }
 }
+
+function keyPressed() {
+  if (currentEmotion === "excited") {
+    if (key === '1' || key === '!') {
+      currentShape = 'ellipse';
+    } else if (key === '2' || key === '@') {
+      currentShape = 'rect';
+    } else if (key === '3' || key === '#') {
+      currentShape = 'triangle';
+    }
+  }
+  if (currentEmotion === "excited" && (key === 'C' || key === 'c')) {
+    extraShapes = [];
+  }
+}
+function mousePressed() {
+  if (currentEmotion === "excited") {
+    let sz = random(16, 40);
+    let speedX = random(-2, 2);
+    let speedY = random(-2, 2);
+    extraShapes.push(new Agent(mouseX, mouseY, sz, speedX, speedY));
+  }
+}
+
+class Agent {
+  constructor(x, y, sz, speedX, speedY) {
+    this.x = x;
+    this.y = y;
+    this.sz = sz;
+    this.dx = speedX;
+    this.dy = speedY;
+    this.h = random(360);
+    this.g = random(180);
+    this.b = random(200);
+    this.a = 150;
+    this.life = 255;
+    
+    // Store triangle points
+    this.triSize = sz;
+  }
+
+  update() {
+    this.x += this.dx;
+    this.y += this.dy;
+    
+    // Bounce off edges
+    if (this.x < 0 || this.x > width) {
+      this.dx *= -1;
+    }
+    if (this.y < 0 || this.y > height) {
+      this.dy *= -1;
+    }
+  }
+  
+  show() {
+    // Check mouse position for color and background effects
+    let mouseXPos = mouseX;
+    let mouseYPos = mouseY;
+    
+    // Determine color based on mouse position
+    let shapeColor;
+    
+    // Bottom left half (x < width/2 AND y > height/2)
+    if (mouseXPos < width / 2 && mouseYPos > height / 2) {
+      // Darker colors
+      shapeColor = color(
+        this.h % 100, 
+        this.g % 80, 
+        this.b % 80, 
+        this.a
+      );
+      // Set white background (handled in draw)
+    } 
+    // Top right half (x > width/2 AND y < height/2)
+    else if (mouseXPos > width / 2 && mouseYPos < height / 2) {
+      // Brighter neon colors
+      shapeColor = color(
+        150 + (this.h % 105), 
+        100 + (this.g % 155), 
+        100 + (this.b % 155), 
+        this.a + 50
+      );
+      // Set black background (handled in draw)
+    } 
+    else {
+      // Normal colors for other areas
+      shapeColor = color(
+        50 + (this.h % 200), 
+        this.g, 
+        this.b, 
+        this.a
+      );
+    }
+    
+    fill(shapeColor);
+    noStroke();
+    
+    // Draw shape based on current selection
+    if (currentShape === 'ellipse') {
+      ellipse(this.x, this.y, this.sz);
+    } 
+    else if (currentShape === 'rect') {
+      rectMode(CENTER);
+      rect(this.x, this.y, this.sz, this.sz);
+      rectMode(CORNER); // Reset to default
+    } 
+    else if (currentShape === 'triangle') {
+      // Draw an equilateral triangle
+      let heightTri = this.sz * (sqrt(3) / 2);
+      triangle(
+        this.x, this.y - this.sz / 2,
+        this.x - this.sz / 2, this.y + heightTri / 2,
+        this.x + this.sz / 2, this.y + heightTri / 2
+      );
+    }
+  }
+}
+
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);

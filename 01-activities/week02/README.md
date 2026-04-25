@@ -8,7 +8,7 @@
     - press key
     - swtich ()
 
-### Elements I Added 
+### Interactive Elements 
 - move mouse to change color of the lines
 - press mouse to change ball color and increase its size
 - press keys 1, 2, 3 to change backgound color to red, green, blue, respectively; press other key to change random gray scale backgroud color
@@ -26,6 +26,10 @@
 
 ### Concepts
 - use loop to draw repeated shapes 
+
+### Interactive Elements
+- Press keys 1, 2, 3 to change the color of the balls to green, blue, purple respectively; press other key to change the color of the balls to random gray scale 
+- Tips of the triangle shapes follow the mouse
 
 ### Screenshots
 ![image01](dm2008-activity-2b/documentation/activity2b-image01.jpg)

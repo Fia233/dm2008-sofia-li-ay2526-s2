@@ -111,7 +111,7 @@ function setup() {
       extraShapes = [];
       titleSize = 48;
       targetTitleSize = 48;
-      backBtn.position(20, height - 30);
+      backBtn.position(20, 20);
       newBackBtn.hide();
   }
 });

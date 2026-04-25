@@ -26,4 +26,6 @@ Progress of Drawing a Pig:
 ![Adding lines](dm2008-activity-1b/documentation/activity1b-image03.jpg)
 
 ### Videos
-[Watch on Google Drive](<https://drive.google.com/your-video-link>)
+![video 1](dm2008-activity-1b/documentation/activity1b-video01.mp4)
+![video 2](dm2008-activity-1b/documentation/activity1b-video02.mp4)
+![added background](dm2008-activity-1b/documentation/activity1b-video03.mp4)

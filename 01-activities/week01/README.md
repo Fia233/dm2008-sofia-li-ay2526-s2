@@ -27,5 +27,7 @@ Progress of Drawing a Pig:
 
 ### Videos
 [video 1](<https://drive.google.com/file/d/1D0qv0Cf5aX_jVjFdfzRtTgCaaULO49mo/view?usp=drive_link>)
+
 [video 2](<https://drive.google.com/file/d/1GJu4JYlUMCENr2JZD0CLUv3B2uYFLMRo/view?usp=drive_link>)
-[added background](<https://drive.google.com/file/d/1gkwuA0O22Cah-to6tb7m6e1-ezheiUhc/view?usp=drive_link>)
+
+[final version](<https://drive.google.com/file/d/1gkwuA0O22Cah-to6tb7m6e1-ezheiUhc/view?usp=drive_link>)

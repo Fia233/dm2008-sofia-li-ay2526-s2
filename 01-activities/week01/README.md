@@ -8,9 +8,7 @@
     - ex: fill(), stroke()
 
 ### Screenshots
-![Progress of Drawing a Pig](dm2008_activity_1a/activity1a-image01.jpg)
-(dm2008_activity_1a/activity1a-image02.jpg)
-(dm2008_activity_1a/activity1a-image03.jpg)
+![Progress of Drawing a Pig](dm2008-activity-1a/documentation/activity1a-image01.jpg)
 
 
 ## Activity 1b

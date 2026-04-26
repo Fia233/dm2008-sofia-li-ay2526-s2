@@ -21,8 +21,13 @@ Bird and Pipes are classes with their own properties and methods.
 ![image01](mini-project/documentation/Mini%20project_image01.jpg)
 ![image02](mini-project/documentation/Mini%20project_image02.jpg)
 
+### Progress
+[video01](<https://drive.google.com/file/d/1hxrBj7Stm2YEGQlZSmoQ4eDTnQEN-OPi/view?usp=drive_link>)
+[video02](<https://drive.google.com/file/d/12IN8TQBVjrSdtERz_DtX3iPH5EVX90CS/view?usp=drive_link>)
+[video03](<https://drive.google.com/file/d/1NeYOcOEVZOsfWDyIsRF6uWfwXiAhNw_b/view?usp=drive_link>)
+
 ### Demo Video
-[flappy bird](<>)
+[flappy bird](<https://drive.google.com/file/d/1kq97zmts_tCgxfPY5EJ7eQKZ_5icGTJY/view?usp=drive_link>)
 
 ### Reflection
 This project is bringing together all the concepts learned in the precvious classes. It helped me to get a better idea of where to create the arrays, make actions, and call the functions. At first, it was quite difficult to write out the correct codes to perform the right actions. However, everything turned out to make more sense as I progressed, and I was able to gradually find a pattern for coding. For instance, after I suceeded in creating a "game over" after detecting collision, it became easier to write the scoring system. 

@@ -12,7 +12,7 @@ This is intended to be a simple, fun work.
 
 ### Documentation
 ![first page](documentation/final-project-image01.jpg)
-[shape not changing correctly](<https://drive.google.com/file/d/18X-UjaWdhgvrbkMvOMj9OuBs162w_rA0/view?usp=drive_link>)
+[shape not changing correctly (video)](<https://drive.google.com/file/d/18X-UjaWdhgvrbkMvOMj9OuBs162w_rA0/view?usp=drive_link>)
 ![color not anxious enough](documentation/final-project-image02.jpg)
 ![bored page](documentation/final-project-image03.jpg)
 ![upgraded text box](documentation/final-project-image04.jpg)

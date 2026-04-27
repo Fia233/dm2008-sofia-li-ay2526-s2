@@ -1,6 +1,6 @@
 ## Activity 4a
 
-### Concepts
+### Concept
 - class
 - elemts under class such as show, update, move, and more.
 
@@ -21,7 +21,7 @@
 
 ## Activity 4b
 
-### Concepts
+### Concept
 - using arrays, loops, and class together
 
 ### Interactive Elements 

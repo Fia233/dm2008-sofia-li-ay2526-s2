@@ -1,6 +1,6 @@
 ## Activity 5a
 
-### Concepts
+### Concept
 - using dist() to check collision between objects
 - creating a vector object
 - add velocity to objects

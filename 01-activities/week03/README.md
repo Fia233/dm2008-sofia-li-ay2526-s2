@@ -1,6 +1,6 @@
 ## Activity 3a
 
-### Concepts
+### Concept
 - color palette
 - push and splice index
 
@@ -16,7 +16,7 @@
 
 ## Activity 3b
 
-### Concepts
+### Concept
 - using arrays
 - creating a function using array to form more complicated repeated shapes/patterns 
 

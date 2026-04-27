@@ -1,6 +1,6 @@
 ## Activity 1a
 
-### Concepts
+### Concept
 - Function setup & funtion draw 
 - Drawing lines & shapes 
     - ex: rect(), ellipse()
@@ -16,7 +16,7 @@ Progress of Drawing a Pig:
 
 ## Activity 1b
 
-### Concepts
+### Concept
 - set variables beforehand
 - random()
 

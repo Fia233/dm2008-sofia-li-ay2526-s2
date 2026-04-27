@@ -1,6 +1,6 @@
 ## Activity 2a
 
-### Concepts
+### Concept
 - Make object move
 - Interactive elements:
     - if statements
@@ -24,7 +24,7 @@
 
 ## Activity 2b
 
-### Concepts
+### Concept
 - use loop to draw repeated shapes 
 
 ### Interactive Elements

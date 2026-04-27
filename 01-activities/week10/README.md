@@ -14,4 +14,4 @@
 ![image03](documentation/activity10-image03.jpg)
 
 ### Video
-![final output](<https://drive.google.com/file/d/14kcgfZa_EZD_u_OOkpxIvaAlG3lgFaYG/view?usp=drive_link>)
+[final output](<https://drive.google.com/file/d/14kcgfZa_EZD_u_OOkpxIvaAlG3lgFaYG/view?usp=drive_link>)

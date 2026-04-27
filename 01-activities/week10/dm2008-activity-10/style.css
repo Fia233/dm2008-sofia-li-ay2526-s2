@@ -1,0 +1,13 @@
+.big-btn {
+  font-size: 24px;
+  padding: 12px 24px;     
+  background-color: #082E5B; 
+  color: white;
+  border: solid 1px white;
+  border-radius: 12px;
+  cursor: pointer; 
+}
+
+.big-btn:hover {
+  background-color: #A7356E; 
+}
